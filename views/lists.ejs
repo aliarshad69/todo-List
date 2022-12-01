@@ -7,11 +7,21 @@
     <title>lists</title>
 </head>
 <body>
-    <% if (KindOfDay === 'Sunday'){ %>
-        <h1 style="color: green;">its a <%= KindOfDay %>!</h1>
-    <% } else { %>
-        <h1 style="color: orange;">its a <%= KindOfDay %>!</h1>
-    <% } %>
+    
+    <h1 style="color: green;">its a <%= KindOfDay %>!</h1>
+    <h1 style="color: green;">its a <%= KindOfDayy %>!</h1>
+    
+    <ul>
+        <% for (var i = 0; i < NewAddedItem.length;i++){ %>
+            <li><%=NewAddedItem[i]%></li>
+        <% } %>    
+    </ul>
+
+    <form action="/" method="post">
+        <input type="text" name="newItem">
+    <button type="submit" name="button">Add</button>
+    </form>
+    
 </body>
 </html>
 
