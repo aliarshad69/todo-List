@@ -7,6 +7,11 @@
     <title>lists</title>
 </head>
 <body>
-    <h1>its a <%=KindOfDay%>!</h1>
+    <% if (KindOfDay === 'Sunday'){ %>
+        <h1 style="color: green;">its a <%= KindOfDay %>!</h1>
+    <% } else { %>
+        <h1 style="color: orange;">its a <%= KindOfDay %>!</h1>
+    <% } %>
 </body>
 </html>
+

@@ -31,31 +31,16 @@ app.set('view engine', 'ejs')
 // })
 
 app.get('/',function(req,res){
-    var DATE = new Date()
-    var DayValue = DATE.getDay()
     
-    switch (DayValue) {
-        case 0:
-          day = "Sunday";
-          break;
-        case 1:
-          day = "Monday";
-          break;
-        case 2:
-           day = "Tuesday";
-          break;
-        case 3:
-          day = "Wednesday";
-          break;
-        case 4:
-          day = "Thursday";
-          break;
-        case 5:
-          day = "Friday";
-          break;
-        case 6:
-          day = "Saturday";
-      }
+    var today = new Date()
+    var options = {
+      weekday: "long",
+      day: "numeric",
+      month: "long"
+    }
+    
+    var day = today.toLocaleDateString('en-US',options)
+
     
     res.render('lists', {
         KindOfDay: day
