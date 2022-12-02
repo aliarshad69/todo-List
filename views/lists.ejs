@@ -11,8 +11,12 @@
 
 <body>
     <div class="box" id="heading">
-        <h1 style="color: green;">its a <%= KindOfDay %>!</h1>
+        <h1 style="color: black;">its a <%= KindOfDay %>!</h1>
     </div>
+    <div class="box" id="heading">
+        <h1 style="color: black;">its a <%= Title %>!</h1>
+    </div>
+    
     
     <div class="box">
         <% for (var i=0; i < NewAddedItem.length;i++){ %>
@@ -25,7 +29,7 @@
         <div>
             <form class="item" action="/" method="post">
                 <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
-                <button type="submit" name="button">+</button>
+                <button type="submit" name="button" value= <%= Title %>>+</button>
             </form>
         </div>
     </div>
