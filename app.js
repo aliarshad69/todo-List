@@ -72,6 +72,16 @@ app.post('/work', function(req,res){
 })
 // *******************************************************************************************
 
+// ***********************************************************************
+app.get('/about',function(req,res){
+  
+  res.render('about')}) 
+
+app.post('/work', function(req,res){
+  res.redirect('/about')
+  // console.log(req.body)
+  
+})
 
 app.listen(3000,function(){
     console.log('server started on port 3000')
